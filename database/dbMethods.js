@@ -27,12 +27,17 @@ var retrieveWatchlist = (id) => {
     })
 }
 
+var updateUser = (user) => {
+  return User.findOneAndReplace({ id: user.id }, user);
+}
+
 
 module.exports = {
 
   insertTitle: insertTitle,
   insertUser: insertUser,
   retrieveUser: retrieveUser,
-  retrieveWatchlist: retrieveWatchlist
+  retrieveWatchlist: retrieveWatchlist,
+  updateUser: updateUser
 
 }

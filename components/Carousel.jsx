@@ -95,6 +95,12 @@ class Carousel extends React.Component {
             <Swiper
               spaceBetween={5}
               slidesPerView={4}
+              breakpoints={{
+                500: {
+                  width: 500,
+                  slidesPerView: 1,
+                }
+              }}
               speed={500}
               loop='true'
               navigation={{
